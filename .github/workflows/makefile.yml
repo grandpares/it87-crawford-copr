@@ -16,7 +16,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Install dependencies
-      run: sudo apt install -y linux-headers
+      run: sudo apt install -y linux-headers-$(uname -r)
 
     - name: Clean
       run: make clean
